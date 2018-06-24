@@ -3,7 +3,6 @@ require_relative 'card'
 
 #variaveis globais
 cards = []
-0
 
 #metodos
 def menu()
@@ -35,16 +34,11 @@ def inserir(cards)
   card
 end
 
-#def imprimir(cartao)
-#  puts "Você inseriu o card: "
-#  puts "Portugues -  #{cartao[:portugues]} "
-#  puts "Ingles - #{cartao[:ingles]}"
-#  puts
-#end
-
 def print_all(cartoes)
+  puts "Cards Cadastrados: "
+  puts
   cartoes.each do |n|
-    imprimir(n)
+    n.imprimir()
   end
   puts "Esse sao todos os cards"
 end
@@ -62,9 +56,7 @@ while opcao != 4
     #end
     puts
   elsif opcao == 2
-    puts "Cards Cadastrados:"
-    puts cards.imprimir()
-    #puts print_all(cards)
+    puts print_all(cards)
     puts
   elsif opcao == 3
     puts 'Em qual idioma deseja buscar ?'
