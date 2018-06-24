@@ -2,7 +2,7 @@
 require_relative 'card'
 
 #variaveis globais
-cards = Card.new()
+# cards = Card.new()
 
 #metodos
 def menu()
@@ -20,12 +20,16 @@ def ler
     gets.chomp.downcase
 end
 
-def inserir
+def inserir(cards)
   puts 'Insira uma expressão em Português:'
   portugues = ler()
   puts 'Insira uma expressão em Ingles:'
   ingles = ler()
-  card = { portugues: portugues, ingles: ingles }
+  card = Card.new(portugues,ingles)
+
+  card_existe = false
+  #metodo select
+  
   puts "Você inseriu o card: #{ card } "
   card
 end
