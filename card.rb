@@ -1,7 +1,7 @@
 class Card
   attr_accessor :portugues 
   attr_accessor :ingles 
-  attr :imagem 
+  attr_accessor :imagem 
 
   def initialize(port, ing = "")
     @portugues = port
@@ -12,6 +12,11 @@ class Card
   def imprimir()
     "Card: #{@portugues} => #{@ingles}"
     puts
+  end
+
+  def to_s()
+    "#{portugues()} => #{ingles()}"
+    
   end
 
   def include?(texto)

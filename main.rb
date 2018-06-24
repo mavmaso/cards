@@ -2,7 +2,8 @@
 require_relative 'card'
 
 #variaveis globais
-# cards = Card.new()
+cards = []
+0
 
 #metodos
 def menu()
@@ -29,7 +30,7 @@ def inserir(cards)
 
   card_existe = false
   #metodo select
-  
+
   puts "Você inseriu o card: #{ card } "
   card
 end
@@ -55,7 +56,7 @@ opcao = menu()
 
 while opcao != 4
   if opcao == 1
-    cards = inserir()
+    c = inserir(cards)
     #open('cards.data', 'a') do |f|c
     #  f << cards
     #end
