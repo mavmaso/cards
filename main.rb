@@ -29,18 +29,29 @@ def inserir(cards)
 
   card_existe = false
   #metodo select
+  cards.each do |c|
+    if c == card
+      puts 'Esse card ja existe'
+      card_existe = true
+    end 
+  end
+  
+  if card_existe == false
+    cards << Card
+    puts "Você inseriu o card: #{ card } "
+  end
 
-  puts "Você inseriu o card: #{ card } "
+  puts 
   card
 end
 
-def print_all(cartoes)
-  puts "Cards Cadastrados: "
+def imprimir_cards(cartoes)
+  puts "Cards Cadastrados:"
   puts
-  cartoes.each do |n|
-    n.imprimir()
+  cartoes.each do |cartao|
+    cartao.imprimir()
   end
-  puts "Esse sao todos os cards"
+  puts
 end
 
 #Corpo do codigo
@@ -56,7 +67,8 @@ while opcao != 4
     #end
     puts
   elsif opcao == 2
-    puts print_all(cards)
+    
+    imprimir_cards(cards)
     puts
   elsif opcao == 3
     puts 'Em qual idioma deseja buscar ?'

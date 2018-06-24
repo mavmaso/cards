@@ -6,11 +6,11 @@ class Card
   def initialize(port, ing = "")
     @portugues = port
     @ingles = ing
-    # @imagem = "nenhuma"
+    @imagem = "nenhuma"
   end
 
   def imprimir()
-    "Card: #{@portugues} => #{@ingles}"
+    puts "Card: " + to_s()
     puts
   end
 
