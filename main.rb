@@ -28,6 +28,7 @@ def inserir(cards)
   card = Card.new(portugues,ingles)
 
   card_existe = false
+
   #metodo select
   cards.each do |c|
     if c == card
@@ -37,12 +38,11 @@ def inserir(cards)
   end
   
   if card_existe == false
-    cards << Card
+    cards << card
     puts "Você inseriu o card: #{ card } "
   end
-
   puts 
-  card
+  return card
 end
 
 def imprimir_cards(cartoes)
